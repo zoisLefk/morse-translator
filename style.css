@@ -72,31 +72,36 @@ body {
 }
 
 .button {
-    border: 2px solid rgb(2, 212, 2);
-    border-radius: 20px;
-    padding: 20px;
-    width: fit-content;
-}
-
-.text-button {
+    border: 2px solid rgb(6, 212, 6);
+    border-radius: 25px;
+    padding: 20px 40px;
+    width: 20%;
     font-size: 2em;
-    color: rgb(2, 212, 2);
+    color: rgb(6, 212, 6);
+    text-decoration: none;
 }
 
 .button:hover {
-    background-color: rgb(2, 212, 2);
+    background-color: rgb(6, 212, 6);
+    color: white;
+    box-shadow: 5px 10px #888888;
+    transition: box-shadow 0.2s ease-in-out;
+    transition: color 0.2s ease-in-out;
+    transition: background-color 0.2s ease-in-out;
 }
 
 .button:active {
     background-color: rgb(6, 212, 6);
-}
-
-.button:hover .text-button {
     color: white;
 }
 
-.button:active .text-button {
-    color: white;
+@keyframes shadow {
+    from {
+        box-shadow: 0px 0px;
+    }
+    to {
+        box-shadow: 5px 10px;
+    }
 }
 
 @media (max-width: 350px) {
@@ -111,6 +116,10 @@ body {
 
     .subtitle {
         font-size: 1.5em;
+    }
+
+    .text-button {
+        font-size: 1em;
     }
 }
 
